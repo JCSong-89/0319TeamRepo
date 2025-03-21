@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/kimjeongjae1/0319TeamRepo.git'
+                git clone 'https://github.com/JCSong-89/0319TeamRepo.git'
             }
         }
 
