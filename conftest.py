@@ -42,12 +42,11 @@ def driver():
     user_agent = random.choice(user_agents)
 
     chrome_options = Options() 
-    headless = request.config.getoption("--headless")
 
-    if headless:
-        chrome_options .add_argument("--headless")
-        chrome_options .add_argument("--no-sandbox")
-        chrome_options .add_argument("--disable-dev-shm-usage")
+
+    chrome_options .add_argument("--headless")
+    chrome_options .add_argument("--no-sandbox")
+    chrome_options .add_argument("--disable-dev-shm-usage")
 
     # 1) User-Agent 변경
     chrome_options.add_argument(f'user-agent={user_agent}')
