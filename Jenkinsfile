@@ -27,7 +27,9 @@ pipeline {
 
     post {
         always {
+            sh '''
             echo 'Build finished.'
+            '''
         }
     }
 }
