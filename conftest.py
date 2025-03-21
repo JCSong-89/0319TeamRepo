@@ -48,6 +48,11 @@ def driver():
     chrome_options .add_argument("--no-sandbox")
     chrome_options .add_argument("--disable-dev-shm-usage")
 
+    chrome_options.add_argument('--disable-dev-shm-usage')  # shared memory 문제 방지
+    chrome_options.add_argument('--disable-gpu')  # 가상환경에서 GPU 기능 비활성화
+
+
+
     # 1) User-Agent 변경
     chrome_options.add_argument(f'user-agent={user_agent}')
 
