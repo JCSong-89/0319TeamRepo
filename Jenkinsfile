@@ -24,6 +24,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
+                    cd 0319TeamRepo
+
                     pytest
                 '''
             }
