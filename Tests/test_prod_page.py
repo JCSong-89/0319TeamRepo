@@ -4,6 +4,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 
+import os
+import sys
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 상위 디렉토리
+parent_dir = os.path.dirname(current_dir)
+# sys.path에 상위 디렉토리 경로 추가
+sys.path.append(parent_dir)
+
+
 from prod_page import ProdPage
 import logging
 import pytest
