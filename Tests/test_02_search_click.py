@@ -1,3 +1,13 @@
+import os
+import sys
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 상위 디렉토리
+parent_dir = os.path.dirname(current_dir)
+# sys.path에 상위 디렉토리 경로 추가
+sys.path.append(parent_dir)
+
+
 import time
 import pytest
 from selenium.webdriver.support.ui import WebDriverWait as ws
