@@ -1,3 +1,5 @@
+
+
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait as ws
 from selenium.webdriver.support import expected_conditions as EC
@@ -11,7 +13,6 @@ import logging
 import pytest
 import time
 
-@pytest.mark.usefixtures("driver")
 class TestLoginPage:
     # 회원가입
     #@pytest.mark.skip(reason="아직 테스트케이스 발동 안함")
